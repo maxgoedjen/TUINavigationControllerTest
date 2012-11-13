@@ -13,7 +13,40 @@
 		500086EA165235710067ED42 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 500086E8165235710067ED42 /* Credits.rtf */; };
 		500086ED165235710067ED42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 500086EC165235710067ED42 /* AppDelegate.m */; };
 		500086F0165235710067ED42 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500086EE165235710067ED42 /* MainMenu.xib */; };
+		500087171652358A0067ED42 /* TwUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500087091652357F0067ED42 /* TwUI.framework */; };
+		5000871F165235C30067ED42 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5000871E165235C30067ED42 /* ColorViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		500087081652357F0067ED42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500086F61652357E0067ED42 /* TwUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB5B264C13BE6DA200579B1E;
+			remoteInfo = TwUI;
+		};
+		5000870A1652357F0067ED42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500086F61652357E0067ED42 /* TwUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB5E321813BE7098004B7899;
+			remoteInfo = "Dynamic Library";
+		};
+		5000870C1652357F0067ED42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500086F61652357E0067ED42 /* TwUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5EE983B713BE7809005F430D;
+			remoteInfo = "Static Library";
+		};
+		5000870E1652357F0067ED42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500086F61652357E0067ED42 /* TwUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB5B266113BE6DA300579B1E;
+			remoteInfo = Tests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		500086D5165235710067ED42 /* TUINavigationControllerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUINavigationControllerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +62,9 @@
 		500086EB165235710067ED42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		500086EC165235710067ED42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		500086EF165235710067ED42 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		500086F61652357E0067ED42 /* TwUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TwUI.xcodeproj; path = ../../Development/Following/twui/TwUI.xcodeproj; sourceTree = "<group>"; };
+		5000871D165235C30067ED42 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		5000871E165235C30067ED42 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500087171652358A0067ED42 /* TwUI.framework in Frameworks */,
 				500086DA165235710067ED42 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +100,7 @@
 		500086D8165235710067ED42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				500086F61652357E0067ED42 /* TwUI.xcodeproj */,
 				500086D9165235710067ED42 /* Cocoa.framework */,
 				500086DB165235710067ED42 /* Other Frameworks */,
 			);
@@ -84,6 +122,8 @@
 			children = (
 				500086EB165235710067ED42 /* AppDelegate.h */,
 				500086EC165235710067ED42 /* AppDelegate.m */,
+				5000871D165235C30067ED42 /* ColorViewController.h */,
+				5000871E165235C30067ED42 /* ColorViewController.m */,
 				500086EE165235710067ED42 /* MainMenu.xib */,
 				500086E0165235710067ED42 /* Supporting Files */,
 			);
@@ -100,6 +140,17 @@
 				500086E8165235710067ED42 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		500086F71652357E0067ED42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				500087091652357F0067ED42 /* TwUI.framework */,
+				5000870B1652357F0067ED42 /* libtwui.dylib */,
+				5000870D1652357F0067ED42 /* libtwui.a */,
+				5000870F1652357F0067ED42 /* Tests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,12 +192,49 @@
 			mainGroup = 500086CA165235710067ED42;
 			productRefGroup = 500086D6165235710067ED42 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 500086F71652357E0067ED42 /* Products */;
+					ProjectRef = 500086F61652357E0067ED42 /* TwUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				500086D4165235710067ED42 /* TUINavigationControllerTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		500087091652357F0067ED42 /* TwUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TwUI.framework;
+			remoteRef = 500087081652357F0067ED42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5000870B1652357F0067ED42 /* libtwui.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libtwui.dylib;
+			remoteRef = 5000870A1652357F0067ED42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5000870D1652357F0067ED42 /* libtwui.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libtwui.a;
+			remoteRef = 5000870C1652357F0067ED42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5000870F1652357F0067ED42 /* Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.octest;
+			remoteRef = 5000870E1652357F0067ED42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		500086D3165235710067ED42 /* Resources */ = {
@@ -168,6 +256,7 @@
 			files = (
 				500086E6165235710067ED42 /* main.m in Sources */,
 				500086ED165235710067ED42 /* AppDelegate.m in Sources */,
+				5000871F165235C30067ED42 /* ColorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

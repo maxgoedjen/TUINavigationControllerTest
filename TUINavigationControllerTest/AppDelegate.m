@@ -12,6 +12,12 @@
 @interface AppDelegate ()
 
 @property (nonatomic) TUINavigationController *navController;
+@property (nonatomic) ColorViewController *red;
+@property (nonatomic) ColorViewController *green;
+@property (nonatomic) ColorViewController *blue;
+@property (nonatomic) ColorViewController *purple;
+@property (nonatomic) ColorViewController *orange;
+@property (nonatomic) ColorViewController *black;
 
 @end
 
@@ -30,8 +36,13 @@
     
     [_window makeKeyAndOrderFront:nil];
 	
-	ColorViewController *red = [[ColorViewController alloc] initWithColor:[NSColor redColor]];
-	_navController = [[TUINavigationController alloc] initWithRootViewController:red];
+	_red = [[ColorViewController alloc] initWithColor:[NSColor redColor]];
+	_green = [[ColorViewController alloc] initWithColor:[NSColor greenColor]];
+	_blue = [[ColorViewController alloc] initWithColor:[NSColor blueColor]];
+	_purple = [[ColorViewController alloc] initWithColor:[NSColor purpleColor]];
+	_orange = [[ColorViewController alloc] initWithColor:[NSColor orangeColor]];
+	_black = [[ColorViewController alloc] initWithColor:[NSColor blackColor]];
+	_navController = [[TUINavigationController alloc] initWithRootViewController:_red];
 	[insView setRootView:_navController.view];
 	
 	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(_pushPop) userInfo:nil repeats:YES];
@@ -42,28 +53,28 @@
 	if ([[_navController viewControllers] count] > 3) {
 //		[_navController popToRootViewControllerAnimated:YES];
 //		[_navController popToViewController:[_navController viewControllers][1] animated:YES];
-		[_navController popViewControlerAnimated:YES];
+        [_navController setViewControllers:@[_green, _black] animated:YES];
+//		[_navController popViewControlerAnimated:YES];
 	} else {
-		NSColor *color;
+		TUIViewController *color;
 		switch ([[_navController viewControllers] count]) {
 			case 0:
-				color = [NSColor greenColor];
+				color = _green;
 				break;
 			case 1:
-				color = [NSColor blueColor];
+				color = _blue;
 				break;
 			case 2:
-				color = [NSColor purpleColor];
+				color = _purple;
 				break;
 			case 3:
-				color = [NSColor darkGrayColor];
+				color = _orange;
 				break;
 				
 			default:
 				break;
 		}
-		ColorViewController *colorVC = [[ColorViewController alloc] initWithColor:color];
-		[_navController pushViewController:colorVC animated:YES];
+		[_navController pushViewController:color animated:YES];
 	}
 	
 }
